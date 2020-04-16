@@ -1,0 +1,42 @@
+{
+  "window.zoomLevel": -1,
+  "workbench.iconTheme": "material-icon-theme",
+  "color-highlight.markerType": "dot-before",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "color-highlight.enable": false,
+  "editor.tokenColorCustomizations": {
+    "comments": "#4f4f4f"
+  },
+  "search.showLineNumbers": true,
+  "editor.tabSize": 2,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "javascript": "html",
+    "php": "php"
+  },
+  "highlight-matching-tag.highlightSelfClosing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": false,
+  "autoimport.semicolon": false,
+  "javascript.format.semicolons": "remove",
+  "breadcrumbs.enabled": false,
+  "prettier.semi": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "typescript.format.semicolons": "remove",
+  "editor.renderControlCharacters": true,
+  "typescript.reportStyleChecksAsWarnings": false,
+  "editor.comments.insertSpace": false,
+  "prettier.useTabs": true,
+  "json.format.enable": false,
+  "workbench.colorTheme": "SynthWave '84",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+}
