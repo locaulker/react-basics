@@ -1,39 +1,65 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-function Books() {
+// ES5: parameters & arguments
+// function sayName(name) {
+// 	console.log(name)
+// }
+// sayName('John')
+// sayName('Bob')
+
+// PARENT COMPONENT:
+// passes data (attributes/parameters)
+function People() {
+	
+	const friends = [
+		{firstName:'John', job:'Developer', age:'23', company:'Apple'},
+		{firstName:'Bob', job:'Designer', age:'21', company:'Facebook'},
+		{firstName:'Susy', job:'Artist', age:'26', company:'Google'},
+		
+	]
+
 	return (
 		<section>
-			<Book />
-			<Book />
-			<Book />
-			<Book />
-			<Book />
+			<Person person={friends[0]} />
+			<Person person={friends[1]} />
+			<Person person={friends[2]} />
 		</section>
 	)
 }
 
-// Explicit return
-const Book = () => {
+// CHILD COMPONENT:
+// receives data as a 'collection of attributes' in an object
+// the object is received as argument of the function
+// the arguments are normally called "props"
+
+// const person = {
+// 	name: "John",
+// 	age: 26
+// }
+// const {name} = person
+// console.log(name);
+
+
+// const showPerson = ({name,age}) => console.log(name, age);
+// showPerson(person)
+
+const Person = ({person: {firstName, job, age, company }}) => {
+	// console.log(name)
+
+	// Destructuring
+	// const {firstName,job,age,company} = props.person
+
 	return (
 		<article>
-			<CoverImage />
-			<Title />
-			<Author />
+			<h1>{firstName}</h1>
+			<p>{job}</p>
+			<p>{age}</p>
+			<h3>{company}</h3>
+			<hr />
 		</article>
 	)
 }
 
-// Implicit return
-const CoverImage = () => (
-	<img
-		width="200"
-		src="https://m.media-amazon.com/images/I/71N4oeWwYlL._AC_UY327_FMwebp_QL65_.jpg"
-		alt="Wonky Donkey"
-	/>
-)
-
-const Title = () => <h1>The Wonky Donkey</h1>
-const Author = () => <p>by Craig Smith</p>
-
-ReactDOM.render(<Books />, document.getElementById("root"))
+ReactDOM.render(<People />, document.getElementById('root'))
